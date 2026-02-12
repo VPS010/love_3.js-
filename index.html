@@ -51,7 +51,7 @@
             color: #ffffff;
             font-family: sans-serif;
             font-size: 12px;
-            opacity: 0.6;
+            opacity: 0.7;
             pointer-events: none;
             letter-spacing: 1px;
         }
@@ -90,18 +90,23 @@
             "Wildflower.",
             "Forever maybe.",
             "You feel safe.",
-            "So lovely.",
+            "So cute.",
             "You're my peace.",
             "Miss your smile.",
             "you're my Paracetamol.",
             "You matter",
             "Hold my hand?.",
+            "Try harder.",
             "Always you.",
             "Dreaming?.",
             "Innocent soul.",
             "You’re my weakness.",
             "I noticed that.",
-            "Control that smile."
+            "Control that smile.",
+            "Too charming.",
+            "Miss beautiful.",
+            "Those dreamy eyes.",
+            "Relax, cutie.",
         ];
 
         function shuffle(array) {
@@ -353,11 +358,11 @@
             const hitsMain = raycaster.intersectObject(mainHeart);
             if (hitsMain.length > 0) {
                 if (heartsClicked < totalHearts) {
-                    const warningMsg = "Read all " + (totalHearts - heartsClicked) + " small hearts first!";
+                    const warningMsg = "Dear read all " + (totalHearts - heartsClicked) + " small hearts first!";
                     spawnFloatingText(mainHeart.position.clone().add(new THREE.Vector3(0, 2, 0)), warningMsg);
                     shakeTime = 10;
                 } else {
-                    spawnFloatingText(mainHeart.position, "Happy Valentine's Day", true);
+                    spawnFloatingText(mainHeart.position, "Happy Valentine's Day Dear", true);
                     // REMOVED: spawnShockwave(mainHeart.position);
                     mainHeart.visible = false;
                     document.getElementById('hint').style.display = 'none';
